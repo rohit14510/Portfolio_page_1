@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<style>
+.image-container {
+    position: relative;
+   /* Ensures the scaling effect is contained within the image */
+    width: 100%;
+    height: auto; /* Adjust this based on your design needs */
+    transition: transform 1s ease;
+}
+
+.image-container img {
+    width: 90%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+.image-container:hover img {
+    transform: scale(1.1); /* Scales the image */
+}
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    right:0; /* Initially hidden off to the left */
+    width: 80%;
+    background: rgba(239, 127, 27, 0.9); /* Background color for content */
+    color: white; 
+    box-sizing: border-box;
+    transition: transform 1s ease; /* Smooth transition for the movement */
+    overflow: hidden;
+}
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color:#5B5B5B; /* Initial background color */
+    transition: left 0.5s ease; /* Smooth transition for background color */
+    z-index:0; /* Behind the content */
+}
+
+.image-container:hover .content::before {
+    left: 0; /* Slide the background color to cover the entire content */
+}
+
+h5 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em; /* Adjust as needed */
+ 
+}
+.hide_content{
+    display: none;
+    position: relative;
+   padding: 1rem;
+
+
+
+    /* display:block;
+    z-index:1;
+    transition: display 1s ease; */
+}
+/* .hide_content p{
+    color: black;
+    z-index: 1000;
+} */
+
+
+.image-container:hover .hide_content{
+    display:block;  
+}
+
+.arrow_icon{
+    background-color: #EF7F1B !important;
+    color: white;
+    font-size: 2rem;
+    z-index: 2;
+    border: none;
+}
+.arrow_icon i{
+    padding: 1rem;
+}
+.image-container:hover .content{
+    background-color: transparent;
+}
+.image-container:hover.arrow_icon{
+background-color: #EF7F1B !important;
+z-index: 1000;
+}
+
+
+</style>
+<body>
+    <div class="container text-center mt-5"style="color: #465e6a;">
+        <h1 class="fw-bold" >Our Work</h1>
+        <p>Our success is measured by results</p>
+    </div>
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-lg-4 mb-4">
+            <div class="image-container">
+                <img src="aasets/img_1.webp" alt="Project Image">
+                <div class="overlay">
+                </div>
+                <div class="content">
+                   <div class="d-flex justify-content-between align-items-center">
+                    <div><h5 class="fw-bold p-2">OSWAL-SOAP-GROUP</h5></div>
+                    <button class="arrow_icon"><i class="fa-solid fa-arrow-right"></i></button>               
+                </div>
+                <div class="hide_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, deserunt.</p>
+                </div>
+            </div>
+        </div>
+     
+
+    </div>
+    <div class="col-lg-4 mb-4">
+        <div class="image-container">
+            <img src="aasets/img_2.webp" alt="Project Image">
+            <div class="overlay">
+            </div>
+            <div class="content">
+               <div class="d-flex justify-content-between align-items-center">
+                <div><h5 class="fw-bold p-2">OSWAL-SOAP-GROUP</h5></div>
+                <button class="arrow_icon"><i class="fa-solid fa-arrow-right"></i></button>               
+            </div>
+            <div class="hide_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, deserunt.</p>
+            </div>
+        </div>
+    </div>
+ 
+
+</div>
+<div class="col-lg-4 mb-4">
+    <div class="image-container">
+        <img src="aasets/img_3.webp" alt="Project Image">
+        <div class="overlay">
+        </div>
+        <div class="content">
+           <div class="d-flex justify-content-between align-items-center">
+            <div><h5 class="fw-bold p-2">OSWAL-SOAP-GROUP</h5></div>
+            <button class="arrow_icon"><i class="fa-solid fa-arrow-right"></i></button>               
+        </div>
+        <div class="hide_content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, deserunt.</p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+<div class="row mt-5">
+    <div class="col-lg-4 mb-4">
+        <div class="image-container">
+            <img src="aasets/img_4.webp" alt="Project Image">
+            <div class="overlay">
+            </div>
+            <div class="content">
+               <div class="d-flex justify-content-between align-items-center">
+                <div><h5 class="fw-bold p-2">OSWAL-SOAP-GROUP</h5></div>
+                <button class="arrow_icon"><i class="fa-solid fa-arrow-right"></i></button>               
+            </div>
+            <div class="hide_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, deserunt.</p>
+            </div>
+        </div>
+    </div>
+ 
+
+</div>
+<div class="col-lg-4 mb-4">
+    <div class="image-container">
+        <img src="aasets/img_5.webp" alt="Project Image">
+        <div class="overlay">
+        </div>
+        <div class="content">
+           <div class="d-flex justify-content-between align-items-center">
+            <div><h5 class="fw-bold p-2">OSWAL-SOAP-GROUP</h5></div>
+            <button class="arrow_icon"><i class="fa-solid fa-arrow-right"></i></button>               
+        </div>
+        <div class="hide_content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, deserunt.</p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<div class="col-lg-4 mb-4">
+<div class="image-container">
+    <img src="aasets/img_6.webp" alt="Project Image">
+    <div class="overlay">
+    </div>
+    <div class="content">
+       <div class="d-flex justify-content-between align-items-center">
+        <div><h5 class="fw-bold p-2">OSWAL-SOAP-GROUP</h5></div>
+        <button class="arrow_icon"><i class="fa-solid fa-arrow-right"></i></button>               
+    </div>
+    <div class="hide_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, deserunt.</p>
+    </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>   
+</body>
+</html>
